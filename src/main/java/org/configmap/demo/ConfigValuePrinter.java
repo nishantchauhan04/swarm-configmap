@@ -40,14 +40,13 @@ public class ConfigValuePrinter {
     @ApiOperation(value = "Prints the value of an environment property configured via ConfigMap", response = Response.class,
             notes = "environment property printer")
     public Response envValue() {
-        String propOneFile = "/etc/config/prop.one";
-        String propTwoFile = "/etc/config/prop.two";
+        String applicationProps = "/app/config/application.properties";
 
         String configValues = null;
         try {
-            configValues = Files.readAllLines(Paths.get(propOneFile, propTwoFile))
+            configValues = Files.readAllLines(Paths.get(applicationProps))
                     .stream()
-                    .collect(Collectors.joining(" "));
+                    .collect(Collectors.joining("\n"));
             return Response.status(200).entity(
                     String.format("%s", configValues)).build();
         } catch (IOException e) {

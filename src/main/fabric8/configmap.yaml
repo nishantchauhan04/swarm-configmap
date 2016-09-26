@@ -1,0 +1,8 @@
+metadata:
+  name: ${project.artifactId}
+data:
+  application.properties: |
+    # demo application proeprties file
+    welcome = Hello from Kubernetes ConfigMap!!!
+    dummy = some value
+  java.util.logging.manager: "org.jboss.logmanager.LogManager"
