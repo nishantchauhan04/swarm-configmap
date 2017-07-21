@@ -12,7 +12,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <fabric8.version>2.3.2</fabric8.version>
-    <fabric8.maven.plugin.version>3.5.15</fabric8.maven.plugin.version>
+    <fabric8.maven.plugin.version>3.5.17</fabric8.maven.plugin.version>
 
     <!-- TODO rename -->
     <wildfly-swarm.version>2017.2.0</wildfly-swarm.version>
